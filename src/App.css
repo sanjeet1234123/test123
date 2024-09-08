@@ -616,33 +616,35 @@ width: 99%;
   color: rgba(49, 49, 49, 1);
   font-size: 16px;
   line-height: 22px;
+  width: 200px;
 }
 .option{
   display: flex;
   gap: 10px;
   align-items: center;
-  width: 200px;
+  /* width: 200px; */
 }
 .option-wrapper{
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
   flex-wrap: wrap;
-  width: 60vw;
+  height: 52vh;
+  width: 50vw;
   justify-content: flex-start;
 }
 .company-details{
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%;
 }
 .company-container{
   padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: min-content;
 }
 .company-top-wrapper p{
   font-family: sf_pro_displayregular;
@@ -669,8 +671,15 @@ width: 99%;
     border-color: #0D5C9C;
 }
 
-
+@media (max-width: 1441px) {
+  .company-container{
+    padding: 40px;
+  }
+}
 @media (max-width: 1072px) {
+  .callender-page {
+    height: auto;
+  }
   .callender-left-wrapper.confirmation-step{
     width: auto;
   }
@@ -717,17 +726,39 @@ width: 99%;
     align-items: center;
     justify-content: center;
   }
+  .option-wrapper {
+    height: 46vh;
+}
+.scheduled-demo-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.scheduled-demo h4 {
+width: 212px;
+}
+.callender-left-wrapper {
+  padding: 30px 40px;
+}
+.option p {
+  width: 150px;
+}
 }
 @media (max-width: 820px) {
+  .slots-wrapper {
+    overflow-x: auto;
+    width: 50vw;
+    flex-direction: row;
+}
   .calender-bottom-wrapper {
     padding: 15px 15px;
 }
   .calendar-container {
     padding: 20px 60px 20px 20px;
 }
-  .callender-page {
+  /* .callender-page {
     height: 100%;
-  }
+  } */
   .calender-container-wrapper {
     flex-direction: column;
 }
@@ -739,6 +770,7 @@ width: 99%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
 }
 .calendar-container {
   display: flex;
@@ -746,10 +778,13 @@ width: 99%;
   align-items: center;
 }
 .choose-slot h4 {
-  width: 100px;
+  min-width: 100px;
 }
 }
 @media (max-width: 604px) {
+  .time-zone-wrapper {
+    width: 7rem;
+}
   .slot-confirmation {
     flex-direction: column;
     gap: 0;
@@ -790,6 +825,9 @@ callender-left-wrapper.confirmation-step {
 }
 }
 @media (max-width: 464px) {
+  .slots-wrapper {
+    width: 80vw;
+}
   .scheduled-demo h3 {
     padding-bottom: 5px;
 }
