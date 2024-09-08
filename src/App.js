@@ -453,40 +453,42 @@ function App() {
                     <h3>Schedule a demo</h3>
                     <h4>Our team will walk you through the platform and demonstrate how our solution can help!</h4>
                   </div>
-                  <div className='duration'>
-                    <img src={timer} alt="Timer" />
-                    <h4>30 min</h4>
-                  </div>
-                  <div className='time-zone-wrapper'>
-                    <div className="time-zone">
+                  <div className='duration-wrapper'>
+                    <div className='duration'>
                       <img src={timer} alt="Timer" />
-                      <input
-                        type="text"
-                        placeholder="Time Zone"
-                        className="red-text"
-                        value={selectedTimeZone}
-                        readOnly
-                      />
+                      <h4>30 min</h4>
                     </div>
-                    <img
-                      src={drop}
-                      alt="dropdown icon"
-                      onClick={handleToggleDropdown}
-                      style={{ cursor: 'pointer' }}
-                    />
-                    {showTimeZones && (
-                      <div className='all-time-zone-wrapper'>
-                        {timeZones.map((zone, index) => (
-                          <div
-                            key={index}
-                            className="time-zone-item"
-                            onClick={() => handleSelectTimeZone(zone)}
-                          >
-                            {zone}
-                          </div>
-                        ))}
+                    <div className='time-zone-wrapper'>
+                      <div className="time-zone">
+                        <img src={timer} alt="Timer" />
+                        <input
+                          type="text"
+                          placeholder="Time Zone"
+                          className="red-text"
+                          value={selectedTimeZone}
+                          readOnly
+                        />
                       </div>
-                    )}
+                      <img
+                        src={drop}
+                        alt="dropdown icon"
+                        onClick={handleToggleDropdown}
+                        style={{ cursor: 'pointer' }}
+                      />
+                      {showTimeZones && (
+                        <div className='all-time-zone-wrapper'>
+                          {timeZones.map((zone, index) => (
+                            <div
+                              key={index}
+                              className="time-zone-item"
+                              onClick={() => handleSelectTimeZone(zone)}
+                            >
+                              {zone}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </>
